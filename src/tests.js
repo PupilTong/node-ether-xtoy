@@ -6,8 +6,6 @@ describe('Addon', function () {
   it('should export symbols', function (done) {
     should.exist(addon.ether_ntoa);
     should.exist(addon.ether_aton);
-    should.exist(addon.ether_ntohost);
-    should.exist(addon.ether_hostton);
     done();
   });
 });
