@@ -12,9 +12,7 @@
   "keywords": [
     "ethernet",
     "ether_ntoa",
-    "ether_aton",
-    "ether_ntohost",
-    "ether_hostton"
+    "ether_aton"
   ],
   "author": "pupilTong",
   "license": "Apache-2.0",
