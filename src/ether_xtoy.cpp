@@ -9,7 +9,8 @@
 
 [[noreturn]] static void throwErrnoError(Napi::Env env, int code) {
     napi_value error;
-    napi_create_error(env, Napi::Value::From(env, uv_err_name(-code)), Napi::Value::From(env, uv_strerror(-code)), &error);
+    napi_create_error(env, Napi::Value::From(env, uv_err_name(-code)),
+                      Napi::Value::From(env, uv_strerror(-code)), &error);
 
     Napi::Error err(env, error);
     err.Set("errno", Napi::Value::From(env, code));
@@ -23,7 +24,8 @@ static Napi::Value EtherNtoA(const Napi::CallbackInfo& info) {
     }
 
     if (!info[0].IsBuffer()) {
-        throw Napi::TypeError::New(env, "The argument is expected to be a Buffer");
+        throw Napi::TypeError::New(env,
+                                   "The argument is expected to be a Buffer");
     }
 
     Napi::Buffer<ether_addr> addrBuf = info[0].As<Napi::Buffer<ether_addr> >();
@@ -44,16 +46,18 @@ static Napi::Value EtherAtoN(const Napi::CallbackInfo& info) {
     }
 
     if (!info[0].IsString()) {
-        throw Napi::TypeError::New(env, "The argument is expected to be a string");
+        throw Napi::TypeError::New(env,
+                                   "The argument is expected to be a string");
     }
 
     const Napi::String arg = info[0].As<Napi::String>();
     const std::string str_addr = arg;
-	const unsigned char * addr = reinterpret_cast<const unsigned char*>(ether_aton(str_addr.c_str()));
-	if(addr==NULL){
+    const unsigned char* addr =
+        reinterpret_cast<const unsigned char*>(ether_aton(str_addr.c_str()));
+    if (addr == NULL) {
         throwErrnoError(env, errno);
-	}
-	return Napi::Buffer<unsigned char>::Copy(env, addr, sizeof(ether_addr));
+    }
+    return Napi::Buffer<unsigned char>::Copy(env, addr, sizeof(ether_addr));
 }
 
 static Napi::Object Init(Napi::Env env, Napi::Object exports) {
