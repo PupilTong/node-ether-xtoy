@@ -43,7 +43,9 @@
     "url": "https://github.com/PupilTong/node-ether-xtoy/issues"
   },
   "homepage": "https://github.com/PupilTong/node-ether-xtoy#readme",
-  "publishConfig": {
-    "access": "public"
+  "binary":{
+    "napi_versions":[
+      3
+    ]
   }
 }
