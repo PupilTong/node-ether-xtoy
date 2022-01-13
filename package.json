@@ -1,6 +1,6 @@
 {
   "name": "ether-xtoy",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "a ether_aton, ether_ntoa bindings for Node.js",
   "main": "index.js",
   "types": "index.d.ts",
