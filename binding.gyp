@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name": "ether_xtoy",
+      "target_name": "ether-xtoy",
       "sources": [
         "src/ether_xtoy.cpp"
       ],
