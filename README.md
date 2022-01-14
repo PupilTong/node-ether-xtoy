@@ -3,6 +3,8 @@ a ether_aton, ether_ntoa bindings for Node.js
 
 [![Node.js CI](https://github.com/PupilTong/node-ether-xtoy/actions/workflows/node.js.yml/badge.svg)](https://github.com/PupilTong/node-ether-xtoy/actions/workflows/node.js.yml)
 
+[![Node.js Package](https://github.com/PupilTong/node-ether-xtoy/actions/workflows/npm-publish.yml/badge.svg?branch=main&event=release)](https://github.com/PupilTong/node-ether-xtoy/actions/workflows/npm-publish.yml)
+
 # installation
 
 `npm install ether-xtoy`
