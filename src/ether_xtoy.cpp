@@ -66,4 +66,4 @@ static Napi::Object Init(Napi::Env env, Napi::Object exports) {
     return exports;
 }
 
-NODE_API_MODULE(inet_xtoy, Init)
+NODE_API_MODULE(ether_xtoy, Init)
