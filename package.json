@@ -1,6 +1,6 @@
 {
   "name": "ether-xtoy",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "a ether_aton, ether_ntoa bindings for Node.js",
   "main": "index.js",
   "types": "index.d.ts",
@@ -27,7 +27,7 @@
     "src/ether_xtoy.cpp",
     "binding.gyp"
   ],
-  "gypfile":true,
+  "gypfile": true,
   "dependencies": {
     "bindings": "^1.5.0",
     "node-addon-api": "^4.0.0",
@@ -39,12 +39,12 @@
     "node-gyp": "^8.0.0",
     "should": "^13.2.3"
   },
-  "bugs":{
+  "bugs": {
     "url": "https://github.com/PupilTong/node-ether-xtoy/issues"
   },
   "homepage": "https://github.com/PupilTong/node-ether-xtoy#readme",
-  "binary":{
-    "napi_versions":[
+  "binary": {
+    "napi_versions": [
       3
     ]
   }
